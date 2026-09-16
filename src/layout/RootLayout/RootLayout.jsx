@@ -1,13 +1,16 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "../../components/Navbar/Navbar"
+import AuthContextProvider from "../../contexts/AuthContext/AuthContextProvider"
 
 
 function RootLayout() {
   return (
-    <div className="app">
-        <Navbar/>
-        <Outlet />
-    </div>
+    <AuthContextProvider>
+        <div className="app">
+            <Navbar/>
+            <Outlet />
+        </div>
+    </AuthContextProvider>
   )
 }
 
