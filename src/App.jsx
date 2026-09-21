@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home"
 import Auth from "./pages/Auth/Auth"
 import CheckOut from "./pages/Checkout/CheckOut"
 import './App.css'
+import ProductDetails from "./components/ProductsDetails/ProductDetails"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Route path='/' element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/checkout" element={<CheckOut />} />
       </Route>
     )

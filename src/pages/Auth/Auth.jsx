@@ -7,7 +7,7 @@ function Auth() {
     const [mode, setMode] = useState("signup");
     const {register, handleSubmit, formState: {errors}} = useForm()
     const [error, setError] = useState(null)
-    const { signUp, login, user, logout } = useAuth()
+    const { signUp, login} = useAuth()
     const navigate = useNavigate()
 
     const onSubmit = (data) => {
